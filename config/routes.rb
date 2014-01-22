@@ -1,4 +1,6 @@
 BeardedArcher::Application.routes.draw do
+  resources :sections
+
   resources :meetings
 
   resources :lessons
