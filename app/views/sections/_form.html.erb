@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :workshop %><br>
-    <%= f.text_field :workshop %>
+    <%= f.collection_select(:workshop_id, Workshop.all, :id, :title, prompt: true) %>
   </div>
   <div class="actions">
     <%= f.submit %>

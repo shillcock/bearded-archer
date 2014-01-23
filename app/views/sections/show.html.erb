@@ -2,8 +2,37 @@
 
 <p>
   <strong>Workshop:</strong>
-  <%= @section.workshop %>
+  <%= @section.workshop.title %>
 </p>
+
+<p>
+  Meetings:
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Lesson</th>
+      <th>Section</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @section.meetings.each do |meeting| %>
+      <tr>
+        <td><%= meeting.date %></td>
+        <td><%= meeting.lesson %></td>
+        <td><%= meeting.section %></td>
+        <td><%= link_to 'Show', meeting %></td>
+        <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
+        <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_section_path(@section) %> |
 <%= link_to 'Back', sections_path %>

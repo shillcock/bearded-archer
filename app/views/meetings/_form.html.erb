@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :lesson %><br>
-    <%= f.text_field :lesson %>
+    <%= f.collection_select(:lesson_id, Lesson.all, :id, :title, prompt: true) %>
   </div>
   <div class="field">
     <%= f.label :section %><br>
-    <%= f.text_field :section %>
+    <%= f.collection_select(:section_id, Section.all, :id, :id, prompt: true) %>
   </div>
   <div class="actions">
     <%= f.submit %>

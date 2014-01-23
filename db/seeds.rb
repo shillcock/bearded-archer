@@ -6,15 +6,15 @@ w1 = Workshop.create title: "Workshop 1"
 
 puts "==== Creating lessons for workshop 1"
 5.times do |x|
-  Lesson.create title: "Lession #{x+1}", lesson_number: x+1, workshop: w1
+  Lesson.create title: "Lession #{x+10}", lesson_number: x+1, workshop: w1
 end
 
 puts "==== Creating workshop 2"
-w2 = Workshop.create title: "Whorkshop 2"
+w2 = Workshop.create title: "Workshop 2"
 
 puts "==== Creating lessons for workshop 2"
 5.times do |x|
-  Lesson.create title: "Lesson #{x+1}", lesson_number: x+1, workshop: w2
+  Lesson.create title: "Lesson #{x+20}", lesson_number: x+1, workshop: w2
 end
 
 puts "==== Creating meetings for section 1"
