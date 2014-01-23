@@ -18,9 +18,9 @@
         <td><%= meeting.date %></td>
         <td><%= meeting.lesson %></td>
         <td><%= meeting.section %></td>
-        <td><%= link_to 'Show', meeting %></td>
-        <td><%= link_to 'Edit', edit_meeting_path(meeting) %></td>
-        <td><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [meeting.section, meeting] %></td>
+        <td><%= link_to 'Edit', edit_section_meeting_path(meeting.section, meeting) %></td>
+        <td><%= link_to 'Destroy', [meeting.section, meeting], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Meeting', new_meeting_path %>
+<%= link_to 'New Meeting', new_section_meeting_path %>

@@ -15,5 +15,5 @@
   <%= @meeting.section %>
 </p>
 
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>
+<%= link_to 'Edit', edit_section_meeting_path(@meeting.section, @meeting) %> |
+<%= link_to 'Back', section_meetings_path %>
